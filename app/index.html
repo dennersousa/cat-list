@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="logoback"></div>
+
+    <p>
+        <span>
+          CAT LIST
+        </span>
+        <strong>Faça sua lista</strong>
+    </p>
+
+    <div class="container">
+        <strong>
+            <label for="listType">Escolha o tipo de lista:</label>
+            <select id="listType">
+                <option value="shopping">Lista de Compras</option>
+                <option value="generic">Lista Genérica</option>
+            </select>
+
+            <div class="input-group">
+                <label for="itemName" class="itens">Item:</label>
+                <input type="text" id="itemName" placeholder="Digite o item">
+            </div>
+
+            <div id="quantitySection">
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" placeholder="Quantidade">
+            </div>
+
+            <button onclick="addItem()">Adicionar</button>
+
+            <div id="todoList"></div>
+
+            <script src="script.js"></script>
+        </strong>
+    </div>
+
+    <div class="blur-background" id="blur-background"></div>
+
+</body>
+</html>

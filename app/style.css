@@ -1,0 +1,201 @@
+body {
+    font: 400 1em/1.5 "Neuton";
+    background: #090d00;
+    color: rgba(255, 255, 255, .25);
+    text-align: center;
+    margin: 0;
+    overflow: auto;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Change to min-height for smaller content */
+    background-image: url('background-image.jpg');
+    color: rgb(0, 0, 0);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    filter: grayscale(50%); 
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    filter: drop-shadow(5px 5px 5px #7a5400);
+}
+
+.logoback {
+    position: absolute;
+    width: 90%; /* Make it responsive */
+    max-width: 400px; /* Set maximum width */
+    height: 150px;
+    top: 10%;
+    border-radius: 20px;
+    background-color: #ffb62d;
+    z-index: -1;
+}
+
+.container,
+.blur-background {
+    position: relative; /* Change to relative */
+    max-width: 100%; /* Make the width responsive */
+}
+
+.container {
+    position: absolute;
+    height: 500px;
+    width: 90%; /* Make it responsive */
+    max-width: 400px; /* Set maximum width */
+    top: 35%;
+    margin-top: 50px;
+    z-index: 5;
+}
+
+.blur-background {
+    position: absolute;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    height: 200px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #ffa500;
+    top: 35%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+p {
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    display: inline-block;
+    border-width: px 0;
+    padding: 1.5em 0em;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 40em;
+    margin: 0 0 0 -20em;
+    color: black;
+}
+
+p span {
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .0em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+label,
+.select-label,
+.input-label {
+    text-align: left;
+    top: 40%;
+    margin: 1px 0;
+    font-size: 15px;
+    color: black;
+    display:block;
+    padding-left: 100px;
+}
+
+input,
+select {
+    margin: 1px 0;
+    padding: 5px;
+    color: #000;
+    width: 200px;
+    background-color:#ffb62d ;
+    border: none;
+}
+
+input::placeholder {
+    color:#000000;
+    background: #ffb62d;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: #ffb62d;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #ffa500;
+}
+
+#quantitySection {
+    display: none;
+}
+
+.list-item {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%; 
+    max-width: 400px;
+    position: relative; 
+    background: transparent;
+    backdrop-filter: blur(10px); /* Reducido el valor del desenfoque para mayor claridad */
+    border: 1px solid #ffa500;
+}
+
+
+.list-item button {
+    margin-left: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: #ffb62d;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.list-item button:hover {
+    background-color: #ffa500;
+}
+
+.list-item span {
+    flex-grow: 1;
+}
+
+.list-item span.completed {
+    text-decoration: line-through;
+    color: #ffb62d;
+}
