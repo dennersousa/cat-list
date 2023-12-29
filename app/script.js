@@ -1,5 +1,13 @@
 let todoList = [];
 let itemCounter = 1;
+let alertShow = false;
+
+setInterval(()=>{
+    document.title = 
+    alertShow ? "Cat List"
+              : "Faça sua lista!";
+    alertShow = !alertShow;
+}, 1000);
 
 function addItem() {
     const listType = document.getElementById('listType').value;
