@@ -18,7 +18,6 @@ function addItem() {
     displayList();
     adjustContainerHeight();
 
-    // Limpar os campos após adicionar o item
     document.getElementById('itemName').value = "";
     document.getElementById('quantity').value = "";
 }
@@ -57,7 +56,7 @@ function displayList() {
         itemCounter++;
     });
 
-    itemCounter = 1; // Reinicia o contador após a exibição da lista
+    itemCounter = 1; 
 }
 
 function toggleComplete(index) {
@@ -68,17 +67,15 @@ function toggleComplete(index) {
 function deleteItem(index) {
     todoList.splice(index, 1);
     displayList();
+    adjustContainerHeight(); // Chama a função após excluir um item
 }
 
 function adjustContainerHeight() {
     const container = document.getElementById('blur-background');
-    const listItemHeight = 70; // Altura estimada de um item na lista
-    const additionalHeight = 250; // Altura adicional desejada para cada novo item
-
-    // Calcula a altura do contêiner com base na quantidade de itens na lista
+    const listItemHeight = 70; 
+    const additionalHeight = 250; 
     const newHeight = Math.max(todoList.length * listItemHeight + additionalHeight, 100);
 
-    
     container.style.height = `${newHeight}px`;
 }
 
